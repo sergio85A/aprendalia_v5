@@ -1,0 +1,22 @@
+id;asignatura;tipo;pregunta;opciones;respuesta_correcta;extra
+L010;Lengua;cual_no_encaja;¿Cuál de estas palabras NO es un animal?;perro|gato|mesa|caballo;mesa;
+D001;Matematicas;test;300 + 40 + 5 = 345;Resultado mal|Descomposición mal|Todo correcto;Todo correcto;
+G001;Matematicas;test;300 + 200 = 500;4 centenas|5 decenas|OK;OK;Pista: Piensa lo correcto
+N001;Naturals;cual_no_encaja;¿Cuál NO pertenece al ciclo del agua?;evaporación|condensación|plantación|precipitación;plantación;Pista: piensa en cómo se mueve el agua
+G001;Listening;listening;I like listening cats;I like cats|I hate mouses|I like dogs;I like cats;Pista: Listening
+L001;Listening;listening;I like apples;Apples|Bananas|Oranges;Apples;
+L002;Listening;listening;The dog is big;Dog|Cat|Mouse;Dog;
+G002;Listening;guess;The boy is running;The boy is running|The boy is sleeping|The boy is eating;The boy is running;
+G003;Listening;guess;She has a blue dress;She has a blue dress|She has a red dress|She has a green dress;She has a blue dress;
+P001;Listening;pronunciar;Apple;;;Apple;
+P002;Listening;pronunciar;Good morning;;;Good morning;
+P003;Listening;pronunciar;Happy;;;Happy;
+P005;Listening;pronunciar;Pizza;;;I like pizza;
+P007;Listening;hablar;See you tomorrow;;;See you tomorrow;
+P009;Listening;hablar;How are you?;;;How are you?;
+C001;Naturals;clasificar;Clasifica las palabras según su tipo;;Nombre:gato,perro|Verbo:correr,saltar;
+C002;Naturals;clasificar;Clasifica los animales;;Mamíferos:perro,gato|Aves:loro,águila;
+C003;Naturals;clasificar;Clasifica las palabras;;Colores:red,blue|Comida:apple,bread;
+K001;Naturals;completar;El perro ___ en el parque;correr|corre|corriendo;corre;
+K002;Naturals;completar;I ___ apples every day;eat|eats|eating;eat;
+K003;Naturals;completar;La planta necesita ___ para crecer;agua|fuego|hielo;agua;

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aprendalia</title>
+
+  <!-- Fuente amigable para niños (opcional, requiere Internet) -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tu stylesheet (sustituir por el CSS que te pasé) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-center">
+    <div class="game-card" role="main" aria-labelledby="title">
+
+      <!-- Header / brand -->
+      <div class="header" style="width:100%; align-items:center; justify-content:space-between;">
+        <div class="brand" style="align-items:center;">
+          <!--div class="logo" aria-hidden="true">Aprendalia</div-->
+          <div>
+            <h1 id="title" class="title" style="margin:0">Aprendalia ✨</h1>
+          </div>
+        </div>
+
+        <!-- Nivel/estado pequeño -->
+        <div style="text-align:right;">
+          <div class="small subtitle">Puntos: <span id="score">0</span></div>
+        </div>
+      </div>
+
+      <!-- Componente custom para asignaturas -->
+      <div id="subject-wrapper" class="subject-custom" aria-label="Selecciona asignatura" style="width:100%;display:flex;justify-content:center;">
+        <button id="subject-toggle" class="subject-toggle" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="subject-current" type="button">
+          <span id="subject-current">Elige asignatura</span>
+          <span class="subject-arrow" aria-hidden="true">▾</span>
+        </button>
+
+        <ul id="subject-list" class="subject-list" role="listbox" tabindex="-1" style="display:none;">
+          <li role="option" data-value="Lengua" aria-selected="false">📚 Lengua</li>
+          <li role="option" data-value="Ingles" aria-selected="false">🎧 Inglés</li>
+          <li role="option" data-value="Matematicas" aria-selected="false">➗ Matemáticas</li>
+          <li role="option" data-value="Socials" aria-selected="false">🧭 Socials</li>
+          <li role="option" data-value="Naturals" aria-selected="false">🔬 Naturals</li>
+          <li role="option" data-value="Listening" aria-selected="false">🔊 Listening</li>
+        </ul>
+
+        <!-- select oculto para compatibilidad con el resto del código -->
+        <select id="subject" style="display:none;">
+          <option value="">Elige asignatura</option>
+          <option value="Lengua" selected>Lengua</option>
+          <option value="Ingles">Ingles</option>
+          <option value="Matematicas">Matematicas</option>
+          <option value="Socials">Socials</option>
+          <option value="Naturals">Naturals</option>
+          <option value="Listening">Listening</option>
+        </select>
+      </div>
+
+      <!-- Zona de bienvenida / login -->
+      <div id="welcome" aria-hidden="false" style="width:100%;">
+        <img src="girl.png" alt="Niña estudiando" style="width:180px;display:block;margin:8px auto;border-radius:12px;" />
+        <h2 style="margin:6px 0 2px 0">¡Bienvenid@ a Aprendalia! 🌟</h2>
+        <p class="subtitle" style="margin:0 0 8px 0">Introduce tu nombre y la contraseña para empezar</p>
+
+        <input type="text" id="name" placeholder="Nombre" aria-label="Nombre del alumno" />
+        <input type="password" id="pass" placeholder="Contraseña" aria-label="Contraseña" />
+
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:8px;">
+          <button onclick="login()">Entrar</button>
+        </div>
+      </div>
+
+      <!-- Zona de juego (oculta hasta login) -->
+      <div id="game" style="display:none; width:100%;" aria-live="polite">
+
+        <!-- Pregunta -->
+        <h3 id="question" role="heading" aria-level="2">Pregunta aparecerá aquí</h3>
+
+        <!-- Contenedor de respuestas / botones / audio (renderizado por JS) -->
+        <div id="answers" aria-label="Opciones de respuesta"></div>
+
+        <!-- Input para preguntas de tipo escribir -->
+        <input type="text" id="writeAnswer" aria-label="Escribe tu respuesta" style="display:none" />
+
+        <!-- Botón para comprobar respuesta escrita -->
+        <button id="checkBtn" style="display:none" onclick="checkWrite()">Comprobar</button>
+
+        <!-- Botón para reportar pregunta confusa -->
+        <div class="controls-row" style="margin-top:10px;">
+          <button class="small-btn" onclick="reportar()">⚠️ Reportar pregunta</button>
+        </div>
+
+        <!-- Feedback, solución y navegación -->
+        <div id="feedback" aria-live="polite" style="min-height:28px"></div>
+        <div id="solucion" style="display:none"></div>
+
+        <div style="margin-top:10px; display:flex;gap:8px;justify-content:center;width:100%;">
+          <button id="next" onclick="nextQ()" style="display:none">Siguiente ▶</button>
+        </div>
+
+      </div>
+
+    </div> <!-- .game-card -->
+  </div> <!-- .page-center -->
+
+  <!-- Tu script (sustituir por el script.js final que tienes) -->
+  <script src="script.js"></script>
+</body>
+</html>
